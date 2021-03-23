@@ -4,6 +4,9 @@ plugins {
 
 rootProject.name = "OpenSearch"
 
+include 'doc-tools'
+includeBuild("doc-tools/missing-doclet")
+
 List projects = [
   'build-tools',
   'build-tools:reaper',
@@ -117,3 +120,4 @@ if (extraProjects.exists()) {
     addSubProjects('', extraProjectDir)
   }
 }
+
